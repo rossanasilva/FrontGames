@@ -1,0 +1,136 @@
+body{
+    background-color: #cf0063;
+    background-image: linear-gradient(135deg, #dd1173, #350e47);
+    color: ghostwhite;
+    font-family: "Gothic A1", sans-serif;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+#grid{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#grid tr td{
+    border: 1px solid ghostwhite;
+    background-color: dimgray;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+#grid tr td.active{
+    background-color: #333;
+}
+
+#grid tr td.mine{
+    background-color: #d84315;
+}
+
+button{
+
+    margin: 20px 0;
+    padding: 4px 0;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+
+}
+
+p {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+}
+
+section.circle {
+    background-color: #cf0063;
+    background-image: linear-gradient(135deg, #dd1173, #350e47);
+}
+
+section.light {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    position: relative;
+    padding: 70px 0;
+}
+
+div.circle {
+	position: relative;
+	display: flex;
+	width: 50px;
+	height: 50px;
+	border-radius: 100px;
+	align-items: center;
+	justify-content: center;
+}
+
+div.circle:before {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: block;
+	width: 50px;
+	height: 50px;
+	content: " ";
+	cursor: pointer;
+	transition: 0.3s ease-out;
+	border-radius: 150px;
+	filter: blur(7px);
+}
+
+div.circle.long {
+	width: 250px;
+	height: 100px;
+}
+
+div.circle.long:before {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 250px;
+	height: 100px;
+}
+
+div.circle:before {
+	box-shadow: 8px 8px 20px #dd1173, -8px -8px 20px #350e47;
+}
+
+div.circle:hover:before {
+	box-shadow: 8px 8px 20px #dd1173, -8px -8px 20px #350e47,
+		inset -8px -8px 20px #350e47, inset 8px 8px 20px #dd1173;
+}
+
+div.circle:hover:before {
+	transition: 0.3s ease-in;
+	transform: scale(1.05);
+}
+
+@media (max-width: 700px) {
+	body {
+		height: auto;
+		flex-direction: column;
+	}
+	section.light {
+		width: 100vw;
+		height: 100vh;
+	}
+}

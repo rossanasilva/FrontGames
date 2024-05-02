@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gothic A1", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #cf0063;
+    background-image: linear-gradient(135deg, #dd1173, #350e47);
+}
+
+.wrapper{
+    
+    width: 65vmin;
+    height: 65vmin;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    background: #293447;
+    border-radius: 5px;
+    box-shadow: 0 20px 40px rgba(52, 87, 220, 0.2);
+    
+}
+
+.detalhes-jogo {
+    color: #b8c6dc;
+    font-weight: 500;
+    font-size: 1.2em;
+    padding: 20px 27px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.quadro-jogo {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    background: #212837;
+    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
+
+.quadro-jogo .comida {
+    background: #ff003d;
+}
+
+.quadro-jogo .cobra {
+    background: #7cfc00;
+}
+
+.controles {
+    display: none;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.controles i {
+    padding: 25px 0;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #b8c6dc;
+    width: calc(100% / 4);
+    cursor: pointer;
+    border-right: 1px solid #171b26;
+}
+
+@media screen and (max-width: 1560px){
+    .wrapper {
+        width: 90vmin;
+        height: 90vmin;
+        margin-top: 10px ;
+        margin-bottom: 200px;
+    }
+
+    .detalhes-jogo{
+        font-size: 1rem;
+        padding: 15px 27px ;
+    }
+
+    .controles {
+        display: flex;  
+    }
+
+    .controles i{
+        padding: 15px 0;
+        font-size: 1rem;
+    }
+
+}
+
+p {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+}
+
+section.circle {
+    background-color: #cf0063;
+    background-image: linear-gradient(135deg, #dd1173, #350e47);
+}
+
+section.light {
+	display: flex;
+	height: 95vh;
+    margin-top: 100px;
+	align-items: flex-end;
+	justify-content: center;
+    position: absolute;
+    
+}
+
+div.circle {
+	position: relative;
+	display: flex;
+	width: 50px;
+	height: 50px;
+	border-radius: 100px;
+	align-items: center;
+	justify-content: center;
+}
+
+div.circle:before {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: block;
+	width: 50px;
+	height: 50px;
+	content: " ";
+	cursor: pointer;
+	transition: 0.3s ease-out;
+	border-radius: 150px;
+	filter: blur(7px);
+}
+
+div.circle.long {
+    width: 250px; 
+    height: 100px;    
+}
+
+
+div.circle.long:before {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 250px;
+	height: 100px;
+}
+
+div.circle:before {
+	box-shadow: 8px 8px 20px #dd1173, -8px -8px 20px #350e47;
+}
+
+div.circle:hover:before {
+	box-shadow: 8px 8px 20px #dd1173, -8px -8px 20px #350e47,
+		inset -8px -8px 20px #350e47, inset 8px 8px 20px #dd1173;
+}
+
+div.circle:hover:before {
+	transition: 0.3s ease-in;
+	transform: scale(1.05);
+}
+
+@media (max-width: 700px) {
+	body {
+		height: auto;
+		flex-direction: column;
+	}
+	section.light {
+		width: 100vw;
+		height: 100vh;
+	}
+}

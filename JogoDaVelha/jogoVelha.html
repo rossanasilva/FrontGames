@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Imagens/velhaICO.ico" type="image/x-icon">
+    <link rel="stylesheet" href="jogoVelha.css">
+    <title>Jogo da Velha</title>
+</head>
+
+<body>
+    <h1>Jogo da velha</h1>
+    <div id="container">
+        <div class="block">
+            <div id="box1" class="box top left">
+                <span data-player="none" onclick="jogar(this)">&nbsp;</span>
+            </div>
+            <div id="box2" class="box top">
+                <span data-player="none" onclick="jogar(this)">&nbsp;</span>
+            </div>
+            <div id="box3" class="box top right">
+                <span data-player="none" onclick="jogar(this)">&nbsp;</span>
+            </div>
+        </div>
+        <div class="block">
+            <div id="box4" class="box left">
+                <span data-player="none" onclick="jogar(this)">&nbsp;</span>
+            </div>
+            <div id="box5" class="box">
+                <span data-player="none" onclick="jogar(this)">&nbsp;</span>
+            </div>
+            <div id="box6" class="box right">
+                <span data-player="none" onclick="jogar(this)">&nbsp;</span>
+            </div>
+        </div>
+        <div class="block">
+            <div id="box7" class="box bottom left">
+                <span data-player="none" onclick="jogar(this)">&nbsp;</span>
+            </div>
+            <div id="box8" class="box bottom">
+                <span data-player="none" onclick="jogar(this)">&nbsp;</span>
+            </div>
+            <div id="box9" class="box bottom right">
+                <span data-player="none" onclick="jogar(this)">&nbsp;</span>
+            </div>
+        </div>
+    </div>
+    <section class="light">
+        <div class="circle long" id="botaoVoltar">
+          <p>Voltar</p>
+        </div>
+      </section>
+    <script src="jogoVelha.js"></script>
+</body>
+
+</html>

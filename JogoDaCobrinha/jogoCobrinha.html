@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="jogoCobrinha.css" />
+    <link rel="shortcut icon" href="/Imagens/cobraICO.ico" type="image/x-icon" />
+    <title>Jogo da Cobrinha</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="detalhes-jogo">
+        <span class="pontos">Pontos: 0</span>
+        <span class="maior-pontuacao">Pontuação máxima: 0</span>
+      </div>
+
+      <div class="quadro-jogo"></div>
+
+      <div class="controles">
+        <i data-key="setaParaEsquerda" class="fa-solid fa-arrow-left"></i>
+        <i data-key="setaParaCima" class="fa-solid fa-arrow-up"></i>
+        <i data-key="setaParaBaixo" class="fa-solid fa-arrow-down"></i>
+        <i data-key="setaParaDireita" class="fa-solid fa-arrow-right"></i>
+      </div>
+    </div>
+    <section class="light">
+      <div class="circle long" id="botaoVoltar">
+        <p>Voltar</p>
+      </div>
+    </section>
+    <script src="jogoCobrinha.js"></script>
+  </body>
+</html>

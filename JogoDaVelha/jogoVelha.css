@@ -1,0 +1,185 @@
+body{
+    background-color: #cf0063;
+    background-image: linear-gradient(135deg, #dd1173, #350e47);
+    color: ghostwhite;
+    text-align: center;
+    font-family: "Gothic A1", sans-serif;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+h1{
+    margin-top: 5%;
+    font-size: 3rem;
+}
+
+#container{
+    margin: 5% auto;
+    border-radius: 5px;
+    text-align: center; 
+}
+
+.box{
+    display: inline-block;
+    border: 1px solid ghostwhite;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+span{
+    position: absolute;
+    font-size: 75px;
+    font-family: sans-serif;
+    text-align: center;
+    height: 75px;
+    width: 75px;
+    padding: 0;
+    margin: 5px;
+    margin-left: -35px;
+}
+
+.top{
+    border-top: none;
+}
+
+.bottom{
+    border-bottom: none;
+}
+
+.left{
+    border-left: none;
+}
+
+.right{
+    border-right: none;
+}
+
+.alert{
+    height: 75px;
+    width: 125px;
+    display: inline-block;
+    background: #472151 ;
+    position: relative;
+    z-index: 10;
+    margin-top: -50%;
+    border: 2px solid ghostwhite;
+    border-radius: 20px;
+    animation: larger 0.5s;
+    animation-fill-mode: forwards;
+    box-sizing: content-box;
+    padding: 30px;
+    top: 0;
+}
+
+button{
+    background: ghostwhite;
+    border-radius: 2px;
+    color: #472151;
+    border: none;
+    outline: none;
+}
+
+.activeBox{
+    background: silver;
+}
+
+@keyframes larger{
+    from{
+        height: 75px;
+        width: 125px;
+    }
+
+    to{
+        height: 100px;
+        width: 250px;
+    }
+
+}
+
+p {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+}
+
+section.circle {
+    background-color: #cf0063;
+    background-image: linear-gradient(135deg, #dd1173, #350e47);
+}
+
+section.light {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    position: relative;
+}
+
+div.circle {
+	position: relative;
+	display: flex;
+	width: 50px;
+	height: 50px;
+	border-radius: 100px;
+	align-items: center;
+	justify-content: center;
+}
+
+div.circle:before {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: block;
+	width: 50px;
+	height: 50px;
+	content: " ";
+	cursor: pointer;
+	transition: 0.3s ease-out;
+	border-radius: 150px;
+	filter: blur(7px);
+}
+
+div.circle.long {
+	width: 250px;
+	height: 100px;
+}
+
+div.circle.long:before {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 250px;
+	height: 100px;
+}
+
+div.circle:before {
+	box-shadow: 8px 8px 20px #dd1173, -8px -8px 20px #350e47;
+}
+
+div.circle:hover:before {
+	box-shadow: 8px 8px 20px #dd1173, -8px -8px 20px #350e47,
+		inset -8px -8px 20px #350e47, inset 8px 8px 20px #dd1173;
+}
+
+div.circle:hover:before {
+	transition: 0.3s ease-in;
+	transform: scale(1.05);
+}
+
+@media (max-width: 700px) {
+	body {
+		height: auto;
+		flex-direction: column;
+	}
+	section.light {
+		width: 100vw;
+		height: 100vh;
+	}
+}
